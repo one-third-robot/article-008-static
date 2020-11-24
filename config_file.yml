@@ -1,0 +1,9 @@
+# config file example
+---
+# ...
+module:
+  arm:
+    port: /dev/ttyUSB0
+    baud: 115200
+    offset: 1
+    max_angle: 1.5707963
