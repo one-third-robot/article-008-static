@@ -10,6 +10,14 @@
 
 int main(int argc, char* argv[]) {
 
+    if (argc <= 1) {
+        std::cout << "usage:" << std::endl;
+        std::cout << "   $ " << argv[0] << " YAML_FILE" << std::endl;
+        std::cout << "for example:" << std::endl;
+        std::cout << "   $ cd build/" << std::endl;
+        std::cout << "   $ ./static-funcs-1 ../config_file.yml" << std::endl;
+        return -1;
+    }
     const std::string config_file(argv[1]);
     auto config_node = YAML::LoadFile(config_file);
 

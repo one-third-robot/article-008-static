@@ -9,7 +9,14 @@
 #include <yaml-cpp/yaml.h>
 
 int main(int argc, char* argv[]) {
-
+    if (argc <= 1) {
+        std::cout << "usage:" << std::endl;
+        std::cout << "   $ " << argv[0] << " YAML_FILE" << std::endl;
+        std::cout << "for example:" << std::endl;
+        std::cout << "   $ cd build/" << std::endl;
+        std::cout << "   $ ./static-funcs-2 ../config_file.yml" << std::endl;
+        return -1;
+    }
     const std::string file_name(argv[1]);
 
     // ---------------------
